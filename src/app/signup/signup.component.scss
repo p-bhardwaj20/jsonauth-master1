@@ -1,0 +1,84 @@
+#work {
+    height: 100vh;
+    background-image: url("../../assets/images/1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card {
+    width: 320px;
+	height: 665px;
+	background-color: #000000b3;
+	color: #fff;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+	padding: 70px 30px;
+	box-sizing: border-box;
+	border-radius: 10px;
+   
+    /* border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100% ); */
+}
+
+.avatar {
+    width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: fixed;
+	top: -40px;
+	left: calc(50% - 50px);
+}
+
+.card h1,
+h6 {
+    color: #fff;
+}
+
+label {
+    color: #fff;
+}
+
+
+.card .submit {
+    width: 100%;
+	margin-bottom: 20px;
+    /* border: none; */
+	/* outline: none; */
+	height: 40px;
+	/* background-color: dodgerblue; */
+	/* color: #fff; */
+	font-size: 18px;
+	font-family: 'Segoe UI';
+	border-radius: 20px;
+	transition: 0.4s ease;
+}
+.mat-raised-button.mat-button-disabled:not([class*=mat-elevation-z]){
+	background-color: #99a7b6;
+}
+
+/* .card button[type="submit"]:hover{
+	background-color: #ff568f;
+	color: #fff;
+} */
+
+.card a {
+	text-decoration: none;
+	font-size: 12px;
+	font-family: Segoe UI;
+	line-height: 20px;
+	color: darkgrey;
+	transition: 0.4s ease;
+}
+
+.card a:hover{
+	color: #ffc107;
+}

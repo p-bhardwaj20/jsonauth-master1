@@ -1,0 +1,52 @@
+<div class="image" id="work">
+    
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+              <img src="../../assets/images/avatar.jpeg" class="avatar">
+                <div class="text-center">
+                    <h1>Sign up</h1>
+                    <h6>Register yourself</h6>
+                </div>
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Full Name</label>
+                            <input formControlName="name" type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name"> <br>
+                            <span class="text-danger" *ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required','name')">*full name is required</span>
+                          </div>
+                          <!-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+                            <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1" placeholder="Mobile number"> <br>
+                            <span class="text-danger" *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">*mobile number is required</span>
+                          </div> -->
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"> <br>
+                          <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('pattern','email')">*email is invalid</span>
+                          <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*email is required</span>
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="password" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,8}$" type="password" class="form-control" id="exampleInputPassword1" placeholder="password" maxlength="8"> <br>
+                          <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('pattern','password')">*password must be 6-8 characters and contain both numbers and letters/special characters</span>
+                          <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*password is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Retype Password</label>
+                          <input (focusout)="validate(value.value)" #value formControlName="confirmpassword" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,8}$" type="password" class="form-control" placeholder="password" maxlength="8"> <br>
+                          <span class="text-danger" *ngIf="signupForm.controls['confirmpassword'].dirty && signupForm.hasError('pattern','confirmpassword')">*password should match</span>
+                          <span class="text-danger" *ngIf="signupForm.controls['confirmpassword'].dirty && signupForm.hasError('incorrect','confirmpassword')">*password should match</span>
+                        </div>
+                        <!-- <button mat-button-raised class="submit" type="submit" [disabled]="!signupForm.valid">Sign up</button> -->
+                        <button mat-raised-button color="primary" class="submit" type="submit" [disabled]="!signupForm.valid">Sign up</button>
+                      </form>
+                      <a routerLink="/login">Already registered? Click to login</a>
+            </div>
+        </div>
+        <!-- <pre>{{signupForm.value | json}}</pre> -->
+    </div>
+</div>

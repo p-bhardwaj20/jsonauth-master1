@@ -1,0 +1,61 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="name">
+            <h2>Test User</h2>
+        </div>
+            <div>
+                <h4>test@alten-india.com</h4>
+            
+           
+        </div>
+        <img src="../../../../assets/images/avatar.jpeg" alt="Test user">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Pages</h2>
+
+   <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+    <mat-icon>trending_up</mat-icon> Thrombinoscope</a>
+    <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title (click)="$event.stopPropagation();openquali();">
+    <mat-icon>work</mat-icon>
+Qualiview
+</mat-panel-title>
+</mat-expansion-panel-header>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/qdash">Quality dashboard</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/iq">Internal Quality data</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/eq">External Quality data</a>
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/qp">Quality Pareto</a>
+    </mat-expansion-panel> -->
+
+<mat-divider></mat-divider>
+
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/reports">
+    <mat-icon>library_books</mat-icon> Reports</a>
+
+<mat-divider></mat-divider>
+
+<h2 matSubheader>Tools</h2>
+
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon style="padding-left: 7px;">import_contacts</mat-icon>
+    Contacts </a>
+
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title (click)="openSnackBar()">
+                <mat-icon>donut_large</mat-icon>
+                LMS
+
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+    <a mat-list-item href="http://172.24.8.141/moodle/">
+        <mat-icon>face</mat-icon>
+        Moodle </a>
+    </mat-expansion-panel>
+        <a mat-list-item href="https://cppm.atexis.eu/">
+            <mat-icon style="padding-left: 7px;">supervised_user_circle</mat-icon>
+            CPPM </a>

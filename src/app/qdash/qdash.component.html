@@ -1,0 +1,91 @@
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="SideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <!-- <div class="heading">
+            <h1> Quality Dashboard</h1>
+        </div>
+        
+        <div class="new">
+            <button mat-raised-button color="accent">RFT</button>
+            <button mat-raised-button color="primary" routerLink="/r1" >NC code</button>
+            <button mat-raised-button color="primary" routerLink="/r2">RFT vs WP</button>
+            <button mat-raised-button color="primary" routerLink="/r3">Loops vs WP</button>
+            <button mat-raised-button color="primary" routerLink="/r4">RFT vs Process Phase</button>
+        </div>
+            
+        <div id="pivotgrid-demo">
+            <dx-chart id="sales-chart">
+              <dxo-common-series-settings type="bar">
+                <dxo-label [visible]="true" backgroundColor="#c18e92"></dxo-label>
+              </dxo-common-series-settings>
+              <dxo-size [height]=" 250"></dxo-size>
+              <dxo-adaptive-layout [width]="950"></dxo-adaptive-layout>
+              <dxo-tooltip
+                [enabled]="true"
+                format="currency"
+                [customizeTooltip]="customizeTooltip"
+              ></dxo-tooltip>
+            </dx-chart>
+          
+            <dx-pivot-grid
+              id="pivotgrid"
+              [allowSortingBySummary]="true"
+              [allowFiltering]="true"
+              [showBorders]="true"
+              [allowSortingBySummary]="true"
+              [showColumnGrandTotals]="false"
+              [showRowGrandTotals]="false"
+              [showRowTotals]="false"
+              [showColumnTotals]="false"
+              [dataSource]="pivotGridDataSource"
+            >
+            <dxo-size [height]=" 250"></dxo-size>
+            <dxo-adaptive-layout [width]="950"></dxo-adaptive-layout>
+              <dxo-field-chooser [enabled]="true" [height]="400" ></dxo-field-chooser>
+              <dxo-scrolling mode="virtual"></dxo-scrolling>
+            </dx-pivot-grid>
+          </div>
+        
+          <div class="button">
+            <button mat-raised-button color="primary" >export data</button>
+          </div> -->
+<div class="powerbi">
+  <iframe title="QualiView Airbus (1) - Dashboard" width="1240" height="741.25" src="https://app.powerbi.com/reportEmbed?reportId=a7efea8b-c592-40b9-af0c-e16aa3b9637b&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true" navContentPaneEnabled="false" ></iframe>
+</div>
+
+<script type="text/javascript">
+  var embedConfiguration = {
+      type: 'report',
+      accessToken: 'eyJ0YourTokenHereA',
+      id: '719c43ad-xxxxx-f79e8f58c1a6',
+      embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=a7efea8b-c592-40b9-af0c-e16aa3b9637b&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D',
+    settings: {
+                  filterPaneEnabled: false,
+                  navContentPaneEnabled: false
+                } 
+  }; 
+  
+  var report;
+  
+  window.onload = function () {  
+  var $reportContainer = $('#reportContainer'); 
+   report= powerbi.embed($reportContainer.get(0), embedConfiguration);
+    
+  }  
+  
+</script>
+          
+    </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+<app-footer></app-footer>
+
+
+

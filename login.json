@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signUpusers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "name": "test",
+      "email": "test@alten-india.com",
+      "password": "Qwerty@1",
+      "confirmpassword": "Qwerty@1",
+      "id": 2
+    },
+    {
+      "name": "Pratyush",
+      "email": "pratyush.bhardwaj@alten-india.com",
+      "password": "Qwerty@1",
+      "confirmpassword": "Qwerty@1",
+      "id": 3
+    },
+    {
+      "name": "Prajwal",
+      "email": "prajwal@alten-india.com",
+      "password": "Qwerty@1",
+      "confirmpassword": "Qwerty@1",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

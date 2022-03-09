@@ -1,0 +1,99 @@
+<!-- 
+    <div class="box">
+    Dear user, your OTP is <span id="otp"></span>
+</div>
+<br>
+
+<button type="button" onclick="generate()">Generate OTP</button>
+
+    <script>
+        function generate() {
+            let num='1234567890';
+            let OTP='';
+    
+            for(let i=0; i<4; i++)
+            {
+                OTP +=num[Math.floor(Math.random()*10)];
+            }
+    
+            var txt = document.getElementById('otp').value;
+            alert(txt);
+    
+        }
+    </script> -->
+
+<!-- <script>
+    function generate() {
+        let num='1234567890';
+        let OTP='';
+
+        for(let i=0; i<4; i++)
+        {
+            OTP +=num[Math.floor(Math.random()*10)];
+        }
+
+        var txt = document.getElementById('otp').innerHTML=OTP;
+        console.log(txt);
+
+    }
+</script> -->
+
+
+<div class="image" id="work">
+    
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="../../assets/images/avatar.jpeg" class="avatar" >
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please enter email & password</h6>
+                </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> <br>
+                          <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email ID is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"> <br>
+                          <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password is required</span>
+                        </div>
+                        <!-- <button mat-raised-button color="primary" class="submit" type="submit" [disabled]="!loginForm.valid">login</button> -->
+
+                        <button mat-raised-button color="primary" class="submit" type="submit" routerLink="/homepage">login</button>
+                      </form>
+                      <a routerLink="/signup">New user? Click to signup</a>
+                      <a routerLink="/pswd">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="box">
+    Dear user, your OTP is <span id="otp"></span>
+</div>
+<br>
+
+<button type="button" onclick="generate()">Generate OTP</button>
+
+<script>
+    function generate() {
+        let num='1234567890';
+        let OTP='';
+
+        for(let i=0; i<4; i++)
+        {
+            OTP +=num[Math.floor(Math.random()*10)];
+        }
+
+        var txt = document.getElementById('otp').innerHTML=OTP;
+        console.log(txt);
+
+    }
+</script> -->

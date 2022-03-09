@@ -1,0 +1,39 @@
+.heading {
+    text-align: center;
+}
+.new {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: rgb(164, 88, 235);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+// ::ng-deep #pivotgrid {
+//     position: relative;
+//     margin-top: 280px;
+//     right: 350px;
+//   }
+  
+  ::ng-deep .currency {
+    text-align: center;
+  }
+
+//    #pivotgrid-demo {
+//       position: relative;
+//       left: 220px;
+//       top: 40px;
+//   }
+
+.button {
+    position: relative;
+    left: 50%;
+ }
+  

@@ -1,0 +1,123 @@
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="SideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-divider></mat-divider>
+        <br>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    
+            <mat-expansion-panel fxFlex="95" style="left: 25px;" style="left: 25px;" hideToggle (opened)=" panelOpenState=!open"
+                               (closed)=" panelOpenState=open">
+                    
+            <mat-expansion-panel-header style="background-color: dodgerblue;">
+                
+                <mat-icon id="fullscreen" (click)="$event.stopPropagation();fullscreen()">fullscreen</mat-icon>
+              <mat-panel-title style="color: #fff">
+                Qualiview
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+        
+            <iframe id="report" title="QualiView Airbus 7 - Dashboard" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=d0377b28-5ae3-4662-86ef-8bcc72901402&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+          </mat-expansion-panel>
+        </div>
+        
+        <mat-divider></mat-divider>
+        <br>
+        
+        
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+        
+        <mat-expansion-panel fxFlex="95" style="left: 25px;" hideToggle (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+                    
+            <mat-expansion-panel-header style="background-color: dodgerblue;">
+                
+                <mat-icon id="fullscreen2" (click)="$event.stopPropagation();fullscreen2()">fullscreen</mat-icon>
+              <mat-panel-title style="color: #fff">
+                Weeks of Workload
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+        
+            <iframe id="report2" title="Weeks of Workload - Weeks Of Workload" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=1b8c8106-f446-45c5-8d84-0428075dbaf7&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+          </mat-expansion-panel>
+        
+        </div>
+
+        <mat-divider></mat-divider>
+        <br>
+
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+        
+            <mat-expansion-panel fxFlex="95" style="left: 25px;" hideToggle (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                        
+                <mat-expansion-panel-header style="background-color: dodgerblue;">
+                    
+                    <mat-icon id="fullscreen3" (click)="$event.stopPropagation();fullscreen3()">fullscreen</mat-icon>
+                  <mat-panel-title style="color: #fff">
+                    Lean Dashboard
+                  </mat-panel-title>
+                  
+                </mat-expansion-panel-header>
+            
+                <iframe id="report3" title="ATEXIS WORKBOOK - Lean Dashboard - DAILY FOLLOW-UP external (L3+)" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=9c7ef6a7-c243-40c4-9f2c-7881a80a3b08&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+              </mat-expansion-panel>
+            
+            </div>
+
+            <mat-divider></mat-divider>
+        <br>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+        
+                <mat-expansion-panel fxFlex="95" style="left: 25px;" hideToggle (opened)="panelOpenState = true"
+                                       (closed)="panelOpenState = false">
+                            
+                    <mat-expansion-panel-header style="background-color: dodgerblue;">
+                        
+                        <mat-icon id="fullscreen4" (click)="$event.stopPropagation();fullscreen4()">fullscreen</mat-icon>
+                      <mat-panel-title style="color: #fff">
+                        INvoice vs NoINvoice
+                      </mat-panel-title>
+                      
+                    </mat-expansion-panel-header>
+                
+                    <iframe id="report4" title="ATEXIS WORKBOOK - IN vs NOIN - IN and NOIN" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e4187fa4-8926-460c-a731-9e11556e321c&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+                  </mat-expansion-panel>
+                
+                </div>
+
+                <mat-divider></mat-divider>
+        <br>
+
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+        
+                    <mat-expansion-panel fxFlex="95" style="left: 25px;" hideToggle (opened)="panelOpenState = true"
+                                           (closed)="panelOpenState = false">
+                                
+                        <mat-expansion-panel-header style="background-color: dodgerblue;">
+                            
+                            <mat-icon id="fullscreen5" (click)="$event.stopPropagation();fullscreen5()">fullscreen</mat-icon>
+                          <mat-panel-title style="color: #fff">
+                            Training Within Industry
+                          </mat-panel-title>
+                          
+                        </mat-expansion-panel-header>
+                    
+                        <iframe id="report5" title="TWI model - Global performance" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=b69a59bb-d113-482e-9217-cccf89e7137c&autoAuth=true&ctid=9bc3d1cd-55ca-4e13-b5a2-a9e9deaeba3f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1kLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+                      </mat-expansion-panel>
+                    
+                    </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>
+
+

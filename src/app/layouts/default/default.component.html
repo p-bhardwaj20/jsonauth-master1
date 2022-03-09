@@ -1,0 +1,20 @@
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="SideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <!-- <div *ngIf="role === 'manager'"> 
+            <app-dashboard></app-dashboard>
+        </div> -->
+
+        <app-dashboard></app-dashboard>
+
+    </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "colorchange",
+        "Highcharts"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/484b85f9-ab3f-4ca1-8374-01ea325011a6/resourceGroups/DefaultResourceGroup-EA/providers/Microsoft.Web/sites/kpianalytics",
+    "appService.deploySubpath": "dist\\test-dashboard"
+}
